@@ -30,26 +30,24 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
-  app.get("/", function(req, res) {
+  app.get("/", function(req,res) {
     db.Itinerary.findAll({}).then(function(res) {
       res.render("index", {
-        band_Name: "name",
-        concert_Date: "date", ///concert date object name,
-        ticket_Price: "price", //price object name ,
-        venue: "venue"//venue tickmatester object name
+        bandName: "name",
+        concertDate: "date", ///concert date object name,
+        ticketPrice: "price", //price object name ,
+        venue: "venue" //venue tickmatester object name
       });
     });
   });
- 
-  
   // Load itinerary page and pass in concert by id
   app.get("/itinerary/:id", function(req, res) {
     db.Itinerary.findOne({ where: { id: req.params.id } }).then(function(dbTicketmaster) {
       res.render("example", {
-        band_Name: "name",
-        concert_Date: "date",///concert date object name""",
-        ticket_Price: "price",//price object name "",
-        venue:"venue" //venue tickmatester bject name
+        bandName: "name",
+        concertDate: "date", ///concert date object name""",
+        ticketPrice: "price", //price object name "",
+        venue: "venue" //venue tickmatester bject name
       });
     });
   });
@@ -59,4 +57,3 @@ module.exports = function(app) {
     res.render("404");
   });
 };
-

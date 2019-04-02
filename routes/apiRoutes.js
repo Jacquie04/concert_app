@@ -25,10 +25,10 @@
 
 var db = require("../models");
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Get 15 concert results w sequelize
-  app.get("/api/all", function(req, res) {
-    db.Itinerary.findAll({}).then(function(results) {
+  app.get("/api/all", function (req, res) {
+    db.Itinerary.findAll({}).then(function (results) {
       res.json(results);
     });
   });
@@ -38,19 +38,21 @@ module.exports = function(app) {
     console.log(req.body);
     db.Itinerary.create({
       band: req.body.band,
-      concert_Date: req.body.concert_Date,
-      ticket_Price: req.body.ticket_Price,
-      venue: req.body.venue}
-      ).then(function(results) {
-      res.render("index");
+      concertDate: req.body.concert_Date,
+      ticketPrice: req.body.ticket_Price,
+      venue: req.body.venue
+    }).then(function(results) {
+      res.render("index", results);
     });
   });
 
   // Delete a concert by id
   app.delete("/api/itinerarysgit /:id", function(req, res) {
-    db.Itinerary.destroy({ 
-      where: { id: req.params.id } }).then(function(results) {
+    db.Itinerary.destroy({
+      where: { id: req.params.id }
+    }).then(function(results) {
       res.json(itinerary_db);
+      res.render("index", results);
     });
   });
 };

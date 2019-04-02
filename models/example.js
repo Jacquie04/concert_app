@@ -8,11 +8,16 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Itinerary = sequelize.define("itinerary_db", {
-    band: DataTypes.STRING,
-    concert_Date: DataTypes.DATE,
-    ticket_Price: DataTypes.FLOAT(11),
-    venue: DataTypes.TEXT,
-
+    band: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    concertDate: {
+      type: DataTypes.DATE,
+      allowNull: false
+    },
+    ticketPPrice: DataTypes.FLOAT(11),
+    venue: DataTypes.TEXT
   });
   return Itinerary;
 };

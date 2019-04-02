@@ -11,16 +11,17 @@
   },
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "5.8.1",
+    "body-parser": "^1.18.3",
+    "bootstrap": "4.3.1",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "jquery": "3.3.1",
+    "jquery.easing": "^1.4.1",
     "mysql2": "^1.6.4",
     "passport": "^0.4.0",
-    "sequelize": "^4.43.0",
-    "@fortawesome/fontawesome-free": "5.8.1",
-    "bootstrap": "4.3.1",
-    "jquery": "3.3.1",
-    "jquery.easing": "^1.4.1"
+    "sequelize": "^4.43.0"
   },
   "devDependencies": {
     "chai": "^4.1.2",
