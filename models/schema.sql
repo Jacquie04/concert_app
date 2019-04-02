@@ -3,3 +3,7 @@ CREATE DATABASE exampledb;
 
 DROP DATABASE IF EXISTS testdb;
 CREATE DATABASE testdb;
+
+DROP DATABASE IF EXISTS itinerary_db;
+CREATE DATABASE itinerary_db;
+
