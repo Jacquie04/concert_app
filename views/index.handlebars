@@ -1,33 +1,278 @@
-<div id="home">
-  <div class="container">
-    <div class="row">
-      <div class="col-8 offset-2">
-        <h1>{{msg}}</h1>
-        <h2>This is our Home Page!</h2>
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
-        </form>
-        <h3>Examples:</h3>
-        <ul id="example-list" class="list-group">
-          {{#each examples}}
-          <li data-id="{{this.id}}" class="list-group-item">
-            <a href="example/{{this.id}}">{{this.text}}</a>
-            <button class="btn btn-danger float-right delete">ｘ</button>
-          </li>
-          {{/each}}
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">New User? Create A Profile</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#about">Search</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#projects">Itinerary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container d-flex h-100 align-items-center">
+            <div class="mx-auto text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Music Revelation</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">A free App to Find & Add Local Concerts to Your Itinerary.
+                </h2>
+                <button type="button" id="submit" class="btn btn-primary js-scroll-trigger"
+                    onclick="document.getElementById('signinModal').style.display='block'">Sign-In</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!--modal -->
+    <div id="signinModal" class="modal" role="dialog">
+        <div class="modal-dialog" role="document">
+
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+                <br>
+                <img id="signInImage" src="/images/banjo-player-fashion-man-387.jpg" alt="Avatar"
+                    class="img-thumbnail">
+                <br>
+                <hr>
+                <div class="container">
+                    <div class="form-group row">
+                        <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group row">
+                        <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                            <div class="col-sm-10">
+                              <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="rememberMe">
+                                <label class="form-check-label" for="rememberMe"> Remember Me
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                       
+                    <button class="btn btn-primary js scroll-trigger" type="submit">Login</button>
+                    <button class="btn btn-secondary js scroll-trigger"
+                        onclick="document.getElementById('signinModal').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="#">password?</a></span>
+                        <br>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- About Section -->
+    <section id="about" class="about-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="text-white mb-4">Search for a Local Concert</h2>
+                    <nav class="navbar">
+                        <form class="form-inline">
+                            <div class="input-group">>
+                                <input type="text" class="form-control" placeholder="Zipcode" aria-label="Zipcode"
+                                    aria-describedby="basic-addon1">
+
+                                <input type="search" class="form-control" placeholder="Search" aria-label="Search"
+                                    aria-describedby="basic-addon1">
+
+                                <button id="concertSearch" class="btn btn-primary" type="submit">Search</button>
+
+                            </div>
+                        </form>
+                    </nav>
+                    <br>
+                    <p class="text-white-50">After you find a concert you are interested in, you can purchase tickets
+                        through
+                        <a href="https://www.ticketmaster.com/">ticketmaster</a>. Location is not a limitation, the only
+                        limitation is your genre preference.</p>
+                </div>
+            </div>
+            <img src="" class="img-fluid" alt="">
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section bg-light">
+        <div class="container">
+
+            <!-- Featured Project Row -->
+            <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+                <div class="col-xl-8 col-lg-7">
+                    <img class="img-fluid mb-3 mb-lg-0" src="../public/images/bg-masthead.jpg" alt="">
+                </div>
+                <div class="col-xl-4 col-lg-5">
+                    <div class="featured-text text-center text-lg-left">
+                        <h4>Shoreline</h4>
+                        <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can
+                            use it for any project - even commercial projects! Download it, customize it, and
+                            publish your website!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project One Row -->
+            <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="../public/images/demo-image-01.jpg" alt="">
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-left">
+                                <h4 class="text-white">Misty</h4>
+                                <p class="mb-0 text-white-50">An example of where you can put an image of a project,
+                                    or anything else, along with a description.</p>
+                                <hr class="d-none d-lg-block mb-0 ml-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Two Row -->
+            <div class="row justify-content-center no-gutters">
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="../public/images/demo-image-02.jpg" alt="">
+                </div>
+                <div class="col-lg-6 order-lg-first">
+                    <div class="bg-black text-center h-100 project">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center text-lg-right">
+                                <h4 class="text-white">Mountains</h4>
+                                <p class="mb-0 text-white-50">Another example of a project with its respective
+                                    description. These sections work well responsively as well, try this theme on a
+                                    small screen!</p>
+                                <hr class="d-none d-lg-block mb-0 mr-0">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Signup Section -->
+    <section id="signup" class="signup-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 mx-auto text-center">
+
+                    <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+                    <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+
+                    <form class="form-inline d-flex">
+                        <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail"
+                            placeholder="Enter email address...">
+                        <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section bg-black">
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Address</h4>
+                            <hr class="my-4">
+                            <div class="small text-black-50">10920 Lindbrook Dr. Los Angeles, CA </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-envelope text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Email</h4>
+                            <hr class="my-4">
+                            <div class="small text-black-50">
+                                <a href="#">musicrevelation@yourdomain.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <div class="card py-4 h-100">
+                        <div class="card-body text-center">
+                            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                            <h4 class="text-uppercase m-0">Phone</h4>
+                            <hr class="my-4">
+                            <div class="small text-black-50">+1 (555) 902-8832</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social d-flex justify-content-center">
+                <a href="#" class="mx-2">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="mx-2">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="mx-2">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black small text-center text-white-50">
+        <div class="container">
+            Copyright &copy; Mus!c Revelat!on 2019
+        </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="../public/js/grayscale.min.js"></script>
+    <script src="../public/js/index.js"></script>
+
+</body>
+
+</html>
