@@ -1,15 +1,15 @@
-/*$("#submit").on("click", function() {
+$("#signInBtn").on("click", function() {
 
 $('#signinModal').modal("toggle");
 
-};
+});
 
 $("#closeModal").on("click", function() {
 
   $('#signinModal').modal("hide");
   
-  };
-
+});
+/*
   $('#signinModal').on('show.bs.modal', function (event) {
     var button = $(event.relatedTarget) // Button that triggered the modal
     var user = button.data('whatever') // Extract info from data-* attributes
