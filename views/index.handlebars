@@ -43,6 +43,7 @@
     <div class="modal-dialog" role="document">
         <!-- Modal Content -->
         <form class="modal-content animate" action="">
+            <h2>Welcome Back! Please Log In</h2>
             <br>
             <img id="signInImage" src="/images/banjo-player-fashion-man-387.jpg" alt="Avatar" class="img-thumbnail">
             <br>
@@ -72,8 +73,8 @@
             </div>
             <div id="modalFooter" class="container" style="background-color:#f1f1f1">
 
-                <a class="btn btn-primary" type="submit">Login</a>
-                <a class="btn btn-secondary"
+                <a id="loginBtn" class="btn btn-primary" type="">Login</a>
+                <a  id="cancelBtn" class="btn btn-secondary"
                     onclick="document.getElementById('signinModal').style.display='none'"
                     class="cancelbtn_not">Cancel</a>
                 <span class="psw">Forgot <a href="">password?</a></span>
@@ -94,13 +95,13 @@
                             <input id="zipcodeSearch" type="text" class="form-control" placeholder="Zipcode" aria-label="Zipcode"
                                 aria-describedby="basic-addon1">
 
-                            <input id="genreSearch" type="text" class="form-control" placeholder="Genre" aria-label="Genre"
+                            <input id="citySearch" type="text" class="form-control" placeholder="City" aria-label="Genre"
                                 aria-describedby="basic-addon1">
 
-                            <input id="navSearch" type="search" class="form-control" placeholder="Search"
+                            <input id="dateSearch" type="search" class="form-control" placeholder="Date (MM-DD-YYYY)"
                                 aria-label="Search" aria-describedby="basic-addon1">
 
-                            <button id="dateSearch" class="btn btn-primary" type="">Concert Date</button>
+                            <button id="concertSearch" class="btn btn-primary" type="submit">Search</button>
 
                         </div>
                     </form>

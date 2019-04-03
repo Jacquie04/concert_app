@@ -20,6 +20,15 @@ width: auto;
     padding-top: 10px;
 }
 
+#loginBtn {
+color: white;
+border-radius: 5 px;
+}
+
+#cancelBtn {
+color: white;
+}
+
 
 /* Search Page */
 #about {
@@ -30,7 +39,7 @@ width: auto;
     width: auto;
 }
 
-#navSearch {
+#dateSearch {
     /* display: flex; */
     /* flex-direction: row; */
     /* justify-content: space-between !important; */
@@ -38,15 +47,16 @@ width: auto;
    margin-right: 20px; 
    border: none;
    border-radius: 5px;
+   width: 70px;
 }
 
-#dateSearch {
+#concertSearch {
     height: 40px;
     width: 100px;
     text-align: center !important;
 }
 
-#genreSearch {
+#citySearch {
      margin-left: 20px;
      border: none;
      border-radius: 5px;
