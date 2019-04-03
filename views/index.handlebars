@@ -41,9 +41,6 @@
 <!--modal -->
 <div id="signinModal" class="modal" role="dialog">
     <div class="modal-dialog" role="document">
-        <button type="button" id="closeModal" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-        </button>
         <!-- Modal Content -->
         <form class="modal-content animate" action="">
             <br>
@@ -73,12 +70,12 @@
                     </div>
                 </div>
             </div>
-            <div class="container" style="background-color:#f1f1f1">
+            <div id="modalFooter" class="container" style="background-color:#f1f1f1">
 
-                <button class="btn btn-primary js scroll-trigger" type="submit">Login</button>
-                <button class="btn btn-secondary js scroll-trigger"
+                <a class="btn btn-primary" type="submit">Login</a>
+                <a class="btn btn-secondary"
                     onclick="document.getElementById('signinModal').style.display='none'"
-                    class="cancelbtn">Cancel</button>
+                    class="cancelbtn_not">Cancel</a>
                 <span class="psw">Forgot <a href="">password?</a></span>
                 <br>
             </div>
@@ -103,7 +100,7 @@
                             <input id="navSearch" type="search" class="form-control" placeholder="Search"
                                 aria-label="Search" aria-describedby="basic-addon1">
 
-                            <button id="concertSearch" class="btn btn-primary" type="submit">Search</button>
+                            <button id="dateSearch" class="btn btn-primary" type="">Concert Date</button>
 
                         </div>
                     </form>

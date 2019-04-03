@@ -12,6 +12,15 @@ width: auto;
 }
 
 
+/* Modal */
+
+
+#modalFooter {
+    height: 45px;
+    padding-top: 10px;
+}
+
+
 /* Search Page */
 #about {
     background-image: url("/images/band-celebration-concert-1918162.jpg");
@@ -31,7 +40,7 @@ width: auto;
    border-radius: 5px;
 }
 
-#concertSearch {
+#dateSearch {
     height: 40px;
     width: 100px;
     text-align: center !important;
