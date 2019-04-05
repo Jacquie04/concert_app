@@ -1,3 +1,9 @@
+#signupPage {
+    background-image: url("/images/signup3.jpeg");
+    height:1000px;
+    repeat: no-repeat;
+}
+
 /* Home Page */
 
 #signInBtn {

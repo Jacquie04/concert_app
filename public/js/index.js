@@ -1,3 +1,35 @@
+
+
+
+$(document).ready(() => {
+  $("#signupBtn").on("click", function () {
+    
+    var username = $("#username").val().trim();
+    var pass = $("#inputPass").val().trim();
+    console.log(username, pass);
+
+    console.log("signing in");
+    $.post("/auth/signup", {username:username, password:pass}, function (data) {
+      console.log(data);
+    })
+
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*$("#signInBtn").on("click", function() {
 
 $('#signinModal').modal("toggle");
@@ -7,7 +39,7 @@ $('#signinModal').modal("toggle");
 $("#closeModal").on("click", function() {
 
   $('#signinModal').modal("hide");
-  
+
 });
 
   $('#signinModal').on('show.bs.modal', function (event) {
@@ -118,7 +150,7 @@ var handleDeleteBtnClick = function() {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick); 
+$exampleList.on("click", ".delete", handleDeleteBtnClick);
 
 html bootstrap modal
 <div class="modal fade" id="signinModal" tabindex="-1" role="dialog" aria-labelledby="signIn" aria-hidden="true"></div>

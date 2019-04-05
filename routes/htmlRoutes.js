@@ -1,21 +1,61 @@
 var db = require("../models");
+var express = require('express');
+var router = express.Router();
+var passport = require('passport');
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 module.exports = function(app) {
   // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
+  router.get("/guarded", 
+  ensureLoggedIn('/signup'),
+  function(req, res) {
+    console.log(user_db, "db?")
+    db.User.findOne({}).then(function(user_db) {
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+       user: user_db,
+       routeNumber: 1,
+       user: req.user
       });
     });
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
+  router.get("/guarded2", 
+  ensureLoggedIn('/signup'),
+  function(req, res) {
+    db.user.findOne({ where: { id: req.params.id} }).then(function(user_db) {
+      console.log(req.user);
       res.render("example", {
-        example: dbExample
+       user: user_db,
+       routeNumber2,
+       user: req.user
+      });
+    });
+  });
+
+  // app.use('/', router);
+  app.get("/", function(req, res) {
+    db.user.findAll({}).then(function(user_db) {
+      res.render("index", {
+        msg: "Welcome!",
+        user: user_db
+      });
+    });
+  });
+
+// app.get("/signup", function(req, res) {
+//     db.user.findAll({}).then(function(user_db) {
+//       res.render("signup", {
+//         msg: "Welcome!",
+//         user: user_db
+//       });
+//     });
+//   });
+
+  // Load example page and pass in an example by id
+  app.get("/users/:id", function(req, res) {
+    db.user.findOne({ where: { id: req.params.id } }).then(function(user_db) {
+      res.render("user", {
+        user: user_db
       });
     });
   });
