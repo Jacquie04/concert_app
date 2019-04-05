@@ -11,17 +11,16 @@ $(document).ready(function () {
         $.ajax({
             url: queryURL,
             method: "GET",
-            timeout: 1000,
         }).done(function (response) {
             console.log(response)
            
-            /*$('.dropdown-item').on('click', function (event) {
+            $('.dropdown-item').on('click', function (event) {
                 console.log(response)
                 console.log(response.page.totalElements)
                 if (response.page.totalElements == 0){
                     console.log("Nothing is there");
                 }
-            })*/
+            })
             $("#concert-list").empty();
             var concert = response._embedded.events;
             console.log(concert);
@@ -71,7 +70,7 @@ $(document).ready(function () {
         });
 
     }
-    $("li, .btn").click(searchConcert);
+    $("li").click(searchConcert);
 
     //Used to deploy error message if no date is entered into the date input
     $('.NA').on('click', function (event) {
