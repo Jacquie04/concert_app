@@ -1,266 +1,243 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-    <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">New User? Create A Profile</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
-            data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-            aria-label="Toggle navigation">
-            Menu
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#about">Search</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#projects">Itinerary</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
-                </li>
-            </ul>
-        </div>
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">New User? Create A Profile</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+      data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+      aria-label="Toggle navigation">
+      Menu
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about">Search</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#projects">Itinerary</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
 </nav>
 
 <!-- Header -->
 <header class="masthead">
-    <div class="container d-flex h-100 align-items-center">
-        <div class="mx-auto text-center">
-            <h1 class="mx-auto my-0 text-uppercase">Music Revelation</h1>
-            <br>
-            <h2 class="text-white-50 mx-auto mt-2 mb-5"> Having trouble exploring the local music scene during your travels? Start here! 
-              A free App to Find & Add Local Concerts to Your Itinerary.
-            </h2>
-            <button type="button" id="signInBtn" class="btn btn-primary js-scroll-trigger"
-                onclick="document.getElementById('signinModal').style.display='block'">Sign-In</button>
-        </div>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Music Revelation</h1>
+      <br>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5"> Having trouble exploring the local music scene during your travels?
+        Start here!
+        A free App to Find & Add Local Concerts to Your Itinerary.
+      </h2>
+      <button type="button" id="signInBtn" class="btn btn-primary js-scroll-trigger"
+        onclick="document.getElementById('signinModal').style.display='block'">Sign-In</button>
     </div>
+  </div>
 </header>
 
 
 <!--modal -->
 <div id="signinModal" class="modal" role="dialog">
-    <div class="modal-dialog" role="document">
-        <!-- Modal Content -->
-        <form class="modal-content animate" action="">
-            <h2>Welcome Back! Please Log In</h2>
-            <br>
-            <img id="signInImage" src="/images/banjo-player-fashion-man-387.jpg" alt="Avatar" class="img-thumbnail">
-            <br>
-            <div class="container">
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm-10">
-                        <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
-                    </div>
-                </div>
-                <br>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="rememberMe">
-                            <label class="form-check-label" for="rememberMe"> Remember Me
-                            </label>
-                        </div>
-                    </div>
-                </div>
+  <div class="modal-dialog" role="document">
+    <!-- Modal Content -->
+    <form class="modal-content animate" action="">
+      <h2>Welcome Back! Please Log In</h2>
+      <br>
+      <img id="signInImage" src="/images/banjo-player-fashion-man-387.jpg" alt="Avatar" class="img-thumbnail">
+      <br>
+      <div class="container">
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-sm-10">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+          </div>
+        </div>
+        <br>
+        <div class="form-group row">
+          <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="rememberMe">
+              <label class="form-check-label" for="rememberMe"> Remember Me
+              </label>
             </div>
-            <div id="modalFooter" class="container" style="background-color:#f1f1f1">
+          </div>
+        </div>
+      </div>
+      <div id="modalFooter" class="container" style="background-color:#f1f1f1">
 
-                <a id="loginBtn" class="btn btn-primary" type="">Login</a>
-                <a  id="cancelBtn" class="btn btn-secondary"
-                    onclick="document.getElementById('signinModal').style.display='none'"
-                    class="cancelbtn_not">Cancel</a>
-                <span class="psw">Forgot <a href="">password?</a></span>
-                <br>
-            </div>
-        </form>
-    </div>
+        <a id="loginBtn" class="btn btn-primary" type="">Login</a>
+        <a id="cancelBtn" class="btn btn-secondary"
+          onclick="document.getElementById('signinModal').style.display='none'" class="cancelbtn_not">Cancel</a>
+        <span class="psw">Forgot <a href="">password?</a></span>
+        <br>
+      </div>
+    </form>
+  </div>
 </div>
 <!-- About Section -->
 <section id="about" class="about-section text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="text-white mb-4">Search for a Local Concert</h2>
-                    <nav class="navbar">
-                        <form class="form-inline">
-                            <div class="input-group" id="navBarMain">
-                                <input class="Start text" placeholder="Date" type="text">
-                                <input class="City city-text text" placeholder="City" type="text">
-                                <div class="dropdown">
-                                    <button class="btn btn-primary dropdown-toggle" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Dropdown button
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        <li data-value="US"><a class="dropdown-item NA" id="data-val" href="#0">
-                                                <font color="black">United States Of America</font>
-                                            </a></li>
+  <div class="container concert-container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Search for a Local Concert</h2>
+        <nav class="navbar">
+          <form class="form-inline">
+            <div class="input-group" id="navBarMain">
+              <input class="Start text" placeholder="Date" type="text">
+              <input class="City city-text text" placeholder="City" type="text">
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li data-value="US"><a class="dropdown-item NA" id="data-val" href="#0">
+                      <font color="black">United States Of America</font>
+                    </a></li>
 
-                                        <li data-value="AU"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Australia</font>
-                                            </a></li>
+                  <li data-value="AU"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Australia</font>
+                    </a></li>
 
-                                        <li data-value="AT"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Austria</font>
-                                            </a></li>
+                  <li data-value="AT"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Austria</font>
+                    </a></li>
 
-                                        <li data-value="CA"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Canada</font>
-                                            </a></li>
+                  <li data-value="CA"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Canada</font>
+                    </a></li>
 
-                                        <li data-value="CZ"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Czech Republic</font>
-                                            </a></li>
+                  <li data-value="CZ"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Czech Republic</font>
+                    </a></li>
 
-                                        <li data-value="DK"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Denmark</font>
-                                            </a></li>
-
-
-                                        <li data-value="GB "><a class="dropdown-item NA" href="#0">
-                                                <font color="black">England</font>
-                                            </a></li>
-
-                                        <li data-value="FI"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Finland</font>
-                                            </a></li>
-
-                                        <li data-value="DE"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Germany</font>
-                                            </a></li>
+                  <li data-value="DK"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Denmark</font>
+                    </a></li>
 
 
-                                        <li data-value="IE"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Ireland</font>
-                                            </a></li>
+                  <li data-value="GB "><a class="dropdown-item NA" href="#0">
+                      <font color="black">England</font>
+                    </a></li>
 
-                                        <li data-value=LU><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Luxembourg</font>
-                                            </a></li>
+                  <li data-value="FI"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Finland</font>
+                    </a></li>
 
-                                        <li data-value="MX"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Mexico</font>
-                                            </a></li>
+                  <li data-value="DE"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Germany</font>
+                    </a></li>
 
-                                        <li data-value="NL"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Netherlands</font>
-                                            </a></li>
 
-                                        <li data-value="NZ"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">New Zealand</font>
-                                            </a></li>
+                  <li data-value="IE"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Ireland</font>
+                    </a></li>
 
-                                        <li data-value="NO"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Norway</font>
-                                            </a></li>
+                  <li data-value=LU><a class="dropdown-item NA" href="#0">
+                      <font color="black">Luxembourg</font>
+                    </a></li>
 
-                                        <li data-value="PL"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Poland</font>
-                                            </a></li>
+                  <li data-value="MX"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Mexico</font>
+                    </a></li>
 
-                                        <li data-value="ES"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Spain</font>
-                                            </a></li>
+                  <li data-value="NL"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Netherlands</font>
+                    </a></li>
 
-                                        <li data-value="SE"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Sweden</font>
-                                            </a></li>
+                  <li data-value="NZ"><a class="dropdown-item NA" href="#0">
+                      <font color="black">New Zealand</font>
+                    </a></li>
 
-                                        <li data-value="CH"><a class="dropdown-item NA" href="#0">
-                                                <font color="black">Switzerland</font>
-                                            </a></li>
-                                    </div>
-                                </div>
+                  <li data-value="NO"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Norway</font>
+                    </a></li>
 
-                                <div id="concert-list">
-                                    <div class='no-result' style="display:none">
-                                        <h2>Please fill out date in order to get a result! If looking for a specific
-                                            city within the country fill out the city name.</h2>
-                                        <img src="https://media2.giphy.com/media/10juQ7fAaQjuHS/giphy.gif" class='sad'>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </nav>
-                    <p class="text-white-50">After you find a concert you are interested in, you can purchase tickets
-                        through
-                        <a href="https://www.ticketmaster.com/">ticketmaster</a>. Location is not a limitation, the only
-                        limitation is your genre preference.</p>
+                  <li data-value="PL"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Poland</font>
+                    </a></li>
+
+                  <li data-value="ES"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Spain</font>
+                    </a></li>
+
+                  <li data-value="SE"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Sweden</font>
+                    </a></li>
+
+                  <li data-value="CH"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Switzerland</font>
+                    </a></li>
                 </div>
+              </div>
             </div>
-            <img src="" class="img-fluid" alt="">
-        </div>
+          </form>
+        </nav>
+        <p class="text-white-50">After you find a concert you are interested in, you can purchase tickets
+          through
+          <a href="https://www.ticketmaster.com/">ticketmaster</a>. Location is not a limitation, the only
+          limitation is your genre preference.</p>
+      </div>
+    </div>
+    <img src="" class="img-fluid" alt="">
+  </div>
+  <div id="concert-list">
+    <div class='no-result' style="display:none">
+      <h2>Please fill out date in order to get a result! If looking for a specific
+        city within the country fill out the city name.</h2>
+      <img src="https://media2.giphy.com/media/10juQ7fAaQjuHS/giphy.gif" class='sad'>
+    </div>
+  </div>
 </section>
 
-  <!-- Itinerary Section -->
-  <section id="projects" class="projects-section bg-light">
-    <div class="container">
+<!-- Itinerary Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
 
-      <!-- Featured Itinerary Header-->
-      <div class="bg-black row align-items-center no-gutters mb-4 mb-lg-5">
-        <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="/images/singer.png" alt="band">
-        </div>
-        <div class="col-xl-4 col-lg-5">
-          <div class="featured-text text-center text-lg-left">
-            <div class="itineraryTitle">
-              <h4 class="text-white">"Users Name" &nbsp; Journey</h4>
-              <h5><font color="#76D7C4">Concert Itinerary</h5></font>
-            </div>
-            <p class="text-white 0 mb-0">Where's your journey going to take you?&nbsp; </p>
+    <!-- Featured Itinerary Header-->
+    <div class="bg-black row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="/images/singer.png" alt="band">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <div class="itineraryTitle">
+            <h4 class="text-white">"Users Name" &nbsp; Journey</h4>
+            <h5>
+              <font color="#76D7C4">Concert Itinerary
+            </h5>
+            </font>
           </div>
+          <p class="text-white 0 mb-0">Where's your journey going to take you?&nbsp; </p>
         </div>
       </div>
+    </div>
 
-      <!-- Itinerary Row 1-->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
-          <!-- add id for concert image -->
-          <img id="girlImage" class="img-fluid" src="/images/girl.png" alt="band">
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div id="concert1" class="project-text w-100 my-auto text-center text-lg-left">
-
-                <!-- call the date of concert and place under ex.moment().format('ll'); hh:mm a' -->
-                <h3 class="text-white">DAY</h3>
-                <h4 class="text-white" id="concertDate">OCT.24,2020</h4>
-                <h4 class="text-white" id="concertTime">7:00 pm</h4>
-                <!-- CALL DESTINATION OF EVENT - CITY -->
-                <p class="mb-0 text-white-50" id="concertDest">DESTINATION:</p>
-                <!-- CALL NAME OF BAND -->
-                <p class="mb-0 text-white-50" id="band">BAND:</p>
-                <!-- CALL VENUE OF CONCERT -->
-                <p class="mb-0 text-white-50" id="venue">VENUE:</p>
-                <hr class="d-none d-lg-block mb-0 ml-0">
-              </div>
-            </div>
-          </div>
-        </div>
+    <!-- Itinerary Row 1-->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6">
+        <!-- add id for concert image -->
+        <img id="girlImage" class="img-fluid" src="/images/girl.png" alt="band">
       </div>
+      <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div id="concert1" class="project-text w-100 my-auto text-center text-lg-left">
 
-      <!-- Itinerary Row 2 -->
-      <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="/images/acoustic-band-bass-811838.jpg" alt="">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-left h-100 project">
-            <div id="concert2" class="project-text w-100 my-auto text-center text-lg-left">
+              <!-- call the date of concert and place under ex.moment().format('ll'); hh:mm a' -->
               <h3 class="text-white">DAY</h3>
-              <h4 class="text-white" id="cencertDate">OCT.24,2020</h4>
+              <h4 class="text-white" id="concertDate">OCT.24,2020</h4>
               <h4 class="text-white" id="concertTime">7:00 pm</h4>
               <!-- CALL DESTINATION OF EVENT - CITY -->
               <p class="mb-0 text-white-50" id="concertDest">DESTINATION:</p>
@@ -274,50 +251,50 @@
         </div>
       </div>
     </div>
-    </div>
 
-    </div>
-  
-    <div class="container">
-
-      <!-- Itinerary Row 3-->
-      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-        <div class="col-lg-6">
-          <!-- add id for concert image -->
-          <img class="img-fluid" src="/images/bar-blur-bulb-1123262.jpg" alt="band">
-        </div>
-        <div class="col-lg-6">
-          <div class="bg-black text-center h-100 project">
-            <div class="d-flex h-100">
-              <div id="concert1" class="project-text w-100 my-auto text-center text-lg-left">
-
-                <!-- call the date of concert and place under ex.moment().format('ll'); hh:mm a' -->
-                <h3 class="text-white">DAY</h3>
-                <h4 class="text-white" id="concertDate">OCT.24,2020</h4>
-                <h4 class="text-white" id="concertTime">7:00 pm</h4>
-                <!-- CALL DESTINATION OF EVENT - CITY -->
-                <p class="mb-0 text-white-50" id="concertDest">DESTINATION:</p>
-                <!-- CALL NAME OF BAND -->
-                <p class="mb-0 text-white-50" id="band">BAND:</p>
-                <!-- CALL VENUE OF CONCERT -->
-                <p class="mb-0 text-white-50" id="venue">VENUE:</p>
-                <hr class="d-none d-lg-block mb-0 ml-0">
-              </div>
-            </div>
+    <!-- Itinerary Row 2 -->
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="/images/acoustic-band-bass-811838.jpg" alt="">
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="bg-black text-left h-100 project">
+          <div id="concert2" class="project-text w-100 my-auto text-center text-lg-left">
+            <h3 class="text-white">DAY</h3>
+            <h4 class="text-white" id="cencertDate">OCT.24,2020</h4>
+            <h4 class="text-white" id="concertTime">7:00 pm</h4>
+            <!-- CALL DESTINATION OF EVENT - CITY -->
+            <p class="mb-0 text-white-50" id="concertDest">DESTINATION:</p>
+            <!-- CALL NAME OF BAND -->
+            <p class="mb-0 text-white-50" id="band">BAND:</p>
+            <!-- CALL VENUE OF CONCERT -->
+            <p class="mb-0 text-white-50" id="venue">VENUE:</p>
+            <hr class="d-none d-lg-block mb-0 ml-0">
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  </div>
 
-      <!-- Itinerary Row 4-->
-      <div class="row justify-content-center no-gutters">
-        <div class="col-lg-6">
-          <img class="img-fluid" src="/images/guitar.png" alt="guitar">
-        </div>
-        <div class="col-lg-6 order-lg-first">
-          <div class="bg-black text-left h-100 project">
-            <div id="concert2" class="project-text w-100 my-auto text-center text-lg-left">
+  </div>
+
+  <div class="container">
+
+    <!-- Itinerary Row 3-->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6">
+        <!-- add id for concert image -->
+        <img class="img-fluid" src="/images/bar-blur-bulb-1123262.jpg" alt="band">
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-black text-center h-100 project">
+          <div class="d-flex h-100">
+            <div id="concert1" class="project-text w-100 my-auto text-center text-lg-left">
+
+              <!-- call the date of concert and place under ex.moment().format('ll'); hh:mm a' -->
               <h3 class="text-white">DAY</h3>
-              <h4 class="text-white" id="cencertDate">OCT.24,2020</h4>
+              <h4 class="text-white" id="concertDate">OCT.24,2020</h4>
               <h4 class="text-white" id="concertTime">7:00 pm</h4>
               <!-- CALL DESTINATION OF EVENT - CITY -->
               <p class="mb-0 text-white-50" id="concertDest">DESTINATION:</p>
@@ -331,160 +308,95 @@
         </div>
       </div>
     </div>
-    </div>
 
+    <!-- Itinerary Row 4-->
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="/images/guitar.png" alt="guitar">
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="bg-black text-left h-100 project">
+          <div id="concert2" class="project-text w-100 my-auto text-center text-lg-left">
+            <h3 class="text-white">DAY</h3>
+            <h4 class="text-white" id="cencertDate">OCT.24,2020</h4>
+            <h4 class="text-white" id="concertTime">7:00 pm</h4>
+            <!-- CALL DESTINATION OF EVENT - CITY -->
+            <p class="mb-0 text-white-50" id="concertDest">DESTINATION:</p>
+            <!-- CALL NAME OF BAND -->
+            <p class="mb-0 text-white-50" id="band">BAND:</p>
+            <!-- CALL VENUE OF CONCERT -->
+            <p class="mb-0 text-white-50" id="venue">VENUE:</p>
+            <hr class="d-none d-lg-block mb-0 ml-0">
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+  </div>
+
+  </div>
+</section>
 
 <!-- Contact Section -->
 <section class="contact-section bg-black">
-    <div class="container">
+  <div class="container">
 
-        <div class="row">
+    <div class="row">
 
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Address</h4>
-                        <hr class="my-4">
-                        <div class="small text-black-50">10920 Lindbrook Dr. Los Angeles, CA </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-envelope text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Email</h4>
-                        <hr class="my-4">
-                        <div class="small text-black-50">
-                            <a href="#">musicrevelation@yourdomain.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
-                        <h4 class="text-uppercase m-0">Phone</h4>
-                        <hr class="my-4">
-                        <div class="small text-black-50">+1 (555) 902-8832</div>
-                    </div>
-                </div>
-            </div>
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Address</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">10920 Lindbrook Dr. Los Angeles, CA </div>
+          </div>
         </div>
+      </div>
 
-        <div class="social d-flex justify-content-center">
-            <a href="#" class="mx-2">
-                <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="mx-2">
-                <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" class="mx-2">
-                <i class="fab fa-github"></i>
-            </a>
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-envelope text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Email</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">
+              <a href="#">musicrevelation@yourdomain.com</a>
+            </div>
+          </div>
         </div>
+      </div>
 
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Phone</h4>
+            <hr class="my-4">
+            <div class="small text-black-50">+1 (555) 902-8832</div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="social d-flex justify-content-center">
+      <a href="#" class="mx-2">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="#" class="mx-2">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="#" class="mx-2">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+  </div>
 </section>
 
 <!-- Footer -->
 <footer class="bg-black small text-center text-white-50">
-    <div class="container">
-        Copyright &copy; Mus!c Revelat!on 2019
-    </div>
+  <div class="container">
+    Copyright &copy; Mus!c Revelat!on 2019
+  </div>
 </footer>
-
-<script>
-$(document).ready(function () {
-    $('.dropdown-toggle').dropdown();
-
-    function searchConcert(event) {
-        var country = $(this).attr("data-value");
-        var inputDate = $(".Start").val();
-        //converting user input date to match API date format
-        var outputDate = inputDate.replace(/(..).(..).(....)/, "$3-$1-$2");
-        var city = $(".City").val();
-        var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=Music&size=15&sort=date,asc&countryCode=" + country + "&localStartDateTime=" + outputDate + "T14:00:00" + "&city=" + city + "&apikey=YzjL2FipsWpZaCGJsxsgHHFXHhkhaekt";
-        $.ajax({
-            url: queryURL,
-            method: "GET",
-        }).done(function (response) {
-            console.log(response)
-           
-            $('.dropdown-item').on('click', function (event) {
-                console.log(response)
-                console.log(response.page.totalElements)
-                if (response.page.totalElements == 0){
-                    console.log("Nothing is there");
-                }
-            })
-            $("#concert-list").empty();
-            var concert = response._embedded.events;
-            console.log(concert);
-            for (var i = 14; i < concert.length; i--) {
-                var concertDiv = $("<div class='concert'>");
-                var concertName = $("<p class='concert-name'>").text("Artist/Band Name/Event: " + concert[i].name);
-                var convertDate = concert[i].dates.start.localDate;
-                // Converting API date format to standard date format used in USA
-                var convertedDate = convertDate.replace(/(....).(..).(..)/, "$2/$3/$1");
-                var concertDate = $("<p class='concert-date'>").text("Concert Date: " + convertedDate);
-                var responseTime = concert[i].dates.start.localTime;
-                //converting API military time to standard time
-                function convertMilitary(time) {
-                    // Check correct time format and split into components
-                    time = time.toString ().match (/^([01]\d|2[0-3])(:)([0-5]\d)(:[0-5]\d)?$/) || [time];
-                  
-                    if (time.length > 1) { // If time format correct
-                      time = time.slice (1);  // Remove full string match value
-                      time[5] = +time[0] < 12 ? 'AM' : 'PM'; // Set AM/PM
-                      time[0] = +time[0] % 12 || 12; // Adjust hours
-                    }
-                    return time.join (''); // return adjusted time or original string
-                  }
-                  console.log(concert[i].url)
-                var standardConcertTime = convertMilitary(responseTime);
-                var concertTime = $("<p class='concert-time'>").text("Concert Time: " + standardConcertTime);
-                var concertVenue = $("<p class='concert-venue'>").text("Venue Name: " + concert[i]._embedded.venues[0].name);
-                var purchaseTicket = $("<a class='purchase-ticket' target='_blank'>").attr("href", concert[i].url).text("Purchase Tickets Here!");
-                var concertImage = $("<img class='concert-image'>").attr("src", concert[i].images[0].url);
-
-                concertDiv.append(concertName);
-                concertDiv.append(concertDate);
-                concertDiv.append(concertTime);
-                concertDiv.append(purchaseTicket);
-                concertDiv.append(concertVenue);                
-                concertDiv.append(concertImage);
-               
-
-
-
-
-                $("#concert-list").prepend(concertDiv);
-            }
-
-
-
-        });
-
-    }
-    $("li").click(searchConcert);
-
-    //Used to deploy error message if no date is entered into the date input
-    $('.NA').on('click', function (event) {
-        if ($('.text').val() === '') {
-            $('.no-result').toggle();
-        } else {
-            $('.no-result').hide();
-        }
-
-    })
-
-
-});
-</script>

@@ -35,7 +35,7 @@ color: white;
 
 /* Search Page */
 #about {
-    background-image: url("");
+    background-image: url("/images/band-celebration-concert-1918162.jpg");
     background-size: 100%;
     height: 1000px;
     padding-top: 4%;
@@ -72,5 +72,32 @@ color: white;
 
 #navBarMain {
     /* justify-content: space-evenly !important; */
+}
+
+#about {
+    margin: 0 auto;
+}
+
+#concert-list {
+    margin: auto;
+    background-color: black;
+    width: 1000px;
+    height: 650px;
+    overflow: scroll;
+    position: relative;
+    
+}
+
+.concert-image {
+    width: 300px;
+    height: 300px;
+    border-bottom: solid black 1px;
+}
+
+.concert-name,
+.concert-date,
+.concert-time,
+.concert-venue {
+    color: white;
 }
 
