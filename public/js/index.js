@@ -26,11 +26,11 @@ $(document).ready(() => {
     var pass = $("#inputPass").val().trim();
     console.log(username, pass);
 
-    console.log("signing in");
+  console.log("signing in");
     $.get("/auth/login", {username:username, password:pass}, function (data) {
       console.log(data);
     });
-    window.location.replace("/auth/login?user=" + username)
+    window.location.replace("/auth/login?user=" + req.query.user)
   });
 });
 

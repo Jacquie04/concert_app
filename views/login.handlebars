@@ -31,8 +31,7 @@
         <div class="mx-auto text-center">
             <h1 class="mx-auto my-0 text-uppercase">Music Revelation</h1>
             <br>
-            <h2 class="text-white-50 mx-auto mt-2 mb-5"> Having trouble exploring the local music scene during your travels? Start here! 
-              A free App to Find & Add Local Concerts to Your Itinerary.
+            <h2 class="text-white-50 mx-auto mt-2 mb-5"> Go to the search section to add concerts to your itinerary! 
             </h2>
         </div>
     </div>
@@ -41,39 +40,113 @@
 
 
 <!-- About Section -->
+<!-- About Section -->
 <section id="about" class="about-section text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2 class="text-white mb-4">Search for a Concert Near Your Destination</h2>
-                <nav class="navbar">
-                    <form class="form-inline">
-                        <div class="input-group"  id="navBarMain">
-                            <select id="countrySearch" type="text" class="form-control" placeholder="Select A Country" aria-label="Country"
-                                aria-describedby="basic-addon1">
-                              <option>US (United States Of America)</option>
-                              <option>AD (Andorra)</option>
-                        
-                              </select>
-                            <input id="citySearch" type="text" class="form-control" placeholder="City" aria-label="Genre"
-                                aria-describedby="basic-addon1">
-
-                            <input id="dateSearch" type="search" class="form-control" placeholder="Date (MM-DD-YYYY)"
-                                aria-label="Search" aria-describedby="basic-addon1">
-
-                            <button id="concertSearch" class="btn btn-primary" type="submit">Search</button>
-
-                        </div>
-                    </form>
-                </nav>
-                <p class="text-white-50">After you find a concert you are interested in, you can purchase tickets
-                    through
-                    <a href="https://www.ticketmaster.com/">ticketmaster</a>. Location is not a limitation, the only
-                    limitation is your genre preference.</p>
+  <div class="container concert-container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Search for a Local Concert</h2>
+        <nav class="navbar">
+          <form class="form-inline">
+            <div class="input-group" id="navBarMain">
+              <input class="Start date-picker text" placeholder="Date" type="text">
+              <input class="City city-text text" placeholder="City" type="text">
+              <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Dropdown button
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <li data-value="US"><a class="dropdown-item NA" id="data-val" href="#0">
+                      <font color="black">United States Of America</font>
+                    </a></li>
+                  <li data-value="AU"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Australia</font>
+                    </a></li>
+                  <li data-value="AT"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Austria</font>
+                    </a></li>
+                  <li data-value="CA"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Canada</font>
+                    </a></li>
+                  <li data-value="CZ"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Czech Republic</font>
+                    </a></li>
+                  <li data-value="GB "><a class="dropdown-item NA" href="#0">
+                      <font color="black">England</font>
+                    </a></li>
+                  <li data-value="FI"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Finland</font>
+                    </a></li>
+                  <li data-value="DE"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Germany</font>
+                    </a></li>
+                  <li data-value="IE"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Ireland</font>
+                    </a></li>
+                  <li data-value=LU><a class="dropdown-item NA" href="#0">
+                      <font color="black">Luxembourg</font>
+                    </a></li>
+                  <li data-value="MX"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Mexico</font>
+                    </a></li>
+                  <li data-value="NZ"><a class="dropdown-item NA" href="#0">
+                      <font color="black">New Zealand</font>
+                    </a></li>
+                  <li data-value="NO"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Norway</font>
+                    </a></li>
+                  <li data-value="PL"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Poland</font>
+                    </a></li>
+                  <li data-value="ES"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Spain</font>
+                    </a></li>
+                  <li data-value="SE"><a class="dropdown-item NA" href="#0">
+                      <font color="black">Sweden</font>
+                    </a></li>
+                </div>
+              </div>
             </div>
-        </div>
-        <img src="" class="img-fluid" alt="">
+          </form>
+        </nav>
+        <p class="text-white-50">After you find a concert you are interested in, you can purchase tickets
+          through
+          <a href="https://www.ticketmaster.com/">ticketmaster</a>. Location is not a limitation, the only
+          limitation is your genre preference.</p>
+      </div>
     </div>
+    <img src="" class="img-fluid" alt="">
+  </div>
+  <div class="container in">
+    <div class="col-xl-4 col-lg-5">
+      <div class="featured-text text-center text-lg-left">
+        <section id="confirm">
+          <form action='/api/new' method='POST'>
+            <div class="itineraryTitle">
+              <input type="text" class="form-control" placeholder="Enter Concert Name" name="concert_name" value=""
+                id="enter_name">
+              <input type="text" class="form-control" placeholder="Enter Concert Date(DATE ONLY)" name="concert_date"
+                value="" id="enter_date">
+              <input type="text" class="form-control" placeholder="Enter City & Country" name="concert_city" value=""
+                id="enter_city">
+              <input type="text" class="form-control" placeholder="Enter Concert Time(TIME ONLY)" name="concert_time"
+                value="" id="enter_time">
+              <input type="text" class="form-control" placeholder="Enter Concert Venue" name="concert_venue" value=""
+                id="enter_venue">
+              <button type='submit' class='btn itin btn-outline-info'>Add To Itinerary</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div id="concert-list" style="display:none">
+    <div class='no-result' style="display:none">
+      <h2 style="color:teal">Please fill out date in order to get a result! If looking for a specific
+        city within the country fill out the city name.</h2>
+      <img src="https://media2.giphy.com/media/10juQ7fAaQjuHS/giphy.gif" class='sad'>
+    </div>
+  </div>
 </section>
 
   <!-- Itinerary Section -->

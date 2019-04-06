@@ -19,9 +19,6 @@ padding-top: 5px;
 border-radius: 6px;
 }
 
-#linkHome {
-    font-size: 100px;
-}
 
 /* Home Page */
 
@@ -61,7 +58,7 @@ color: white;
 #about {
     background-image: url("/images/band-celebration-concert-1918162.jpg");
     background-size: 100%;
-    height: 1000px;
+    height: 1250px;
     padding-top: 4%;
     width: auto;
 }
@@ -98,3 +95,63 @@ color: white;
     /* justify-content: space-evenly !important; */
 }
 
+
+
+ 
+ #concert-list {
+    margin: auto;
+    background-color: black;
+    opacity: 0.8;
+    width: 700px;
+    height: 690px;
+    overflow: scroll;
+    position: relative;
+ 
+ }
+ 
+ .concert-image {
+    width: 175px;
+    height: 175px;
+    border-bottom: solid black 1px;
+    opacity: unset;
+ }
+ 
+ 
+ 
+ .concert-name,
+ .concert-date,
+ .concert-time,
+ .concert-city,
+ .concert-venue {
+    color: white;
+    text-align: center;
+ }
+ 
+ .concert-name {
+    border-top: solid teal 1px;
+    margin-bottom: -20px;
+ }
+ 
+ .purchase-ticket {
+    padding-right: 200px;
+ }
+ 
+ .in {
+    background-color: black;
+    opacity: 0.8;
+    width: 500px;
+ }
+ 
+ #enter_name,
+ #enter_date,
+ #enter_city,
+ #enter_time,
+ #enter_venue {
+    width: 430px;
+ }
+ 
+ 
+ .itin {
+    padding-left: 40px;
+    width: 430px;
+ }
