@@ -1,31 +1,30 @@
-var db = require("../models/");
-db.Itinerary.findAll().then(function(dbItinerary) {
-  console.log(dbItinerary);
-});
+var db = require("../models");
 
-var express = require("express");
-var router = express.Router();
-
-module.exports = function (app) {
-  // Get 15 concert results w sequelize
-  router.get("/", function (req, res) {
-    db.Itinerary.findAll({dbItinerary}).then(function (results) {
-      res.redirect("/itineraries");
+module.exports = function(app) {
+  // Get all examples
+  app.get("/api/users", function(req, res) {
+    db.user.findAll({}).then(function(user_db) {
+      res.json(user_db);
     });
   });
 
-
-  router.get("/itineraries", function(req,res){
-    db.Itinerary.findAll()
-    .then(function(dbItinerary){
-      var hbsObject = {itinerary : dbItinerary};
-      console.log(hbsObject)
-      return res.render("index", hbsObject);    
+  // Create a new example
+  app.post("/api/users", function(req, res) {
+    db.user.create(req.body).then(function(user_db) {
+      res.json(user_db);
     });
   });
+
+  // Delete an example by id
+  app.delete("/api/users/:id", function(req, res) {
+    db.user.destroy({ where: { id: req.params.id } }).then(function(user_db) {
+      res.json(user_db);
+    });
+  });
+
 
   app.get("/api/new", function (req, res) {
-    db.Itinerary.findAll({}).then(function (results) {
+    db.user.findAll({}).then(function (results) {
       res.redirect("/api/new");
     });
   });
@@ -33,7 +32,7 @@ module.exports = function (app) {
   // Create a new itinerart
   app.post("/api/new", function(req, res) {
     console.log(req.body)
-    db.Itinerary.create({
+    db.user.create({
       concertName: req.body.concert_name,
       concertDate: req.body.concert_date,
       concertCity: req.body.concert_city,
@@ -41,16 +40,6 @@ module.exports = function (app) {
       concertVenue: req.body.concert_venue
     }).then(function(results) {
       
-    });
-  });
-
-  // Delete a concert by id
-  app.delete("/api/:id", function(req, res) {
-    db.Itinerary.destroy({
-      where: { id: req.params.id }
-    }).then(function(results) {
-      res.json(itinerary_db);
-      res.render("index", results);
     });
   });
 };

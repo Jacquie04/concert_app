@@ -1,10 +1,31 @@
+.jumbotron {
+background: transparent;
+color: white;
+text-emphasis: bold;
+}
+
+#signupPage {
+    background-image: url("/images/signup3.jpeg");
+    height: 1000px;
+    repeat: no-repeat;
+}
+
+#signupBtn {
+height: 35px;
+width: 70px;
+border: none;
+text-align: center;
+padding-top: 5px;
+border-radius: 6px;
+}
+
+
 /* Home Page */
 
 #signInBtn {
     height: 60px;
     width: 120px;
 }
-
 
 #girlImage {
 height: 400px;
@@ -74,9 +95,7 @@ color: white;
     /* justify-content: space-evenly !important; */
 }
 
-#about {
-    margin: 0 auto;
-}
+
 
 #concert-list {
     margin: auto;
@@ -86,54 +105,57 @@ color: white;
     height: 690px;
     overflow: scroll;
     position: relative;
-    
+   
 }
 
 .concert-image {
+
     width: 175px;
     height: 175px;
     border-bottom: solid black 1px;
     opacity: unset;
-}
-
-
-
-.concert-name,
-.concert-date,
-.concert-time,
-.concert-city,
-.concert-venue {
+ }
+ 
+ 
+ 
+ .concert-name,
+ .concert-date,
+ .concert-time,
+ .concert-city,
+ .concert-venue {
     color: white;
     text-align: center;
-}
-
-.concert-name {
+ }
+ 
+ .concert-name {
     border-top: solid teal 1px;
     margin-bottom: -20px;
-}
-
-.purchase-ticket {
+ }
+ 
+ .purchase-ticket {
     padding-right: 200px;
-}
-
-.in {
+ }
+ 
+ .in {
     background-color: black;
     opacity: 0.8;
     width: 500px;
-}
-
-#enter_name,
-#enter_date,
-#enter_city,
-#enter_time,
-#enter_venue {
+ }
+ 
+ #enter_name,
+ #enter_date,
+ #enter_city,
+ #enter_time,
+ #enter_venue {
     width: 430px;
-}
-
-
-.itin {
+ }
+ 
+ 
+ .itin {
     padding-left: 40px;
     width: 430px;
-}
+ }
+
+
 
 
