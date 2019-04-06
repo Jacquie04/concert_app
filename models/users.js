@@ -13,7 +13,7 @@ module.exports = function (sequelize,DataTypes) {
 
 
         User.findOne({where: {username: username} }).then(function(user) {
-            if (!user) {return done(null, false); }
+            if (!user) {return done(null, false, { message: 'Unknown User' + username}); }
 
             bcrypt.compare(password, user.password, function(err, res) {
                 if (!res) { return done(null, false); }

@@ -7,16 +7,21 @@ $(document).ready(() => {
 
     console.log("signing in");
     $.post("/auth/signup", {username:username, password:pass}, function (data) {
-      console.log(data);
-    });
+      console.log('response from post', data);
+    
 
+    });
+    window.location.replace("/auth/login?user=" + username)
   });
+
 });
+
+$("#signupBtn").click()
 
 
 $(document).ready(() => {
   $("#loginBtn").on("click", function () {
-    
+
     var username = $("#username").val().trim();
     var pass = $("#inputPass").val().trim();
     console.log(username, pass);
@@ -25,7 +30,7 @@ $(document).ready(() => {
     $.get("/auth/login", {username:username, password:pass}, function (data) {
       console.log(data);
     });
-
+    window.location.replace("/auth/login?user=" + username)
   });
 });
 

@@ -6,11 +6,11 @@ var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 
 module.exports = function(app) {
   // Load index page
-  router.get("/guarded", 
-  ensureLoggedIn('/signup'),
+  router.get("/auth/login", 
+  ensureLoggedIn('/'),
   function(req, res) {
     console.log(user_db, "db?")
-    db.User.findOne({}).then(function(user_db) {
+    db.user.findOne({}).then(function(user_db) {
       res.render("index", {
        user: user_db,
        routeNumber: 1,
@@ -19,18 +19,6 @@ module.exports = function(app) {
     });
   });
 
-  router.get("/guarded2", 
-  ensureLoggedIn('/signup'),
-  function(req, res) {
-    db.user.findOne({ where: { id: req.params.id} }).then(function(user_db) {
-      console.log(req.user);
-      res.render("example", {
-       user: user_db,
-       routeNumber2,
-       user: req.user
-      });
-    });
-  });
 
   // app.use('/', router);
   app.get("/", function(req, res) {
@@ -52,7 +40,7 @@ module.exports = function(app) {
 //   });
 
   // Load example page and pass in an example by id
-  app.get("/users/:id", function(req, res) {
+  app.get("/login/:id", function(req, res) {
     db.user.findOne({ where: { id: req.params.id } }).then(function(user_db) {
       res.render("user", {
         user: user_db

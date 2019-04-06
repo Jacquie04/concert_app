@@ -41,7 +41,8 @@ router.post('/signup', (req, res, next) => {
 });
 
 router.get('/login', (req, res) => {
-    res.render('login', {user : req.user});
+    console.log(req.query, "login req user page")
+    res.render('login', {user : req.query.user});
 });
 
 router.post('/login', passport.authenticate('local', { failureRedirect: '/' }), (req, res, next) => {
@@ -64,8 +65,6 @@ router.get('/logout', (req, res, next) => {
     });
 });
 
-router.get('ping', (req, res) => {
-    res.status(200).send("pong!");
-})
+
 
 module.exports = router;
