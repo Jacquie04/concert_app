@@ -6,6 +6,7 @@ module.exports = function (sequelize,DataTypes) {
         username: DataTypes.STRING,
         password: DataTypes.TEXT
     });
+    
     User.authenticate = function(username, password, done) {
         console.log ('hi from authenticate');
         console.log(username, password);

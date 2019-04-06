@@ -13,9 +13,15 @@ app.use(require('cookie-parser')());
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-
+app.use(require('express-session')({
+  secret: 'super secret', resave: true, saveUninitialized: true
+}));
 app.use(passport.initialize());
 app.use(passport.session());
+
+passport.use(new LocalStrategy(db.user.authenticate));
+passport.serializeUser(db.user.serializeUser);
+passport.deserializeUser(db.user.deserializeUser);
 
 app.use(express.static("public"));
 
@@ -35,9 +41,6 @@ app.use(function(req, res, next) {
 });
 
 
-passport.use(new LocalStrategy(db.user.authenticate));
-passport.serializeUser(db.user.serializeUser);
-passport.deserializeUser(db.user.deserializeUser);
 
 
 var syncOptions = { force: false };

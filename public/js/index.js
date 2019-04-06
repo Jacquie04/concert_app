@@ -1,6 +1,3 @@
-
-
-
 $(document).ready(() => {
   $("#signupBtn").on("click", function () {
     
@@ -11,7 +8,23 @@ $(document).ready(() => {
     console.log("signing in");
     $.post("/auth/signup", {username:username, password:pass}, function (data) {
       console.log(data);
-    })
+    });
+
+  });
+});
+
+
+$(document).ready(() => {
+  $("#loginBtn").on("click", function () {
+    
+    var username = $("#username").val().trim();
+    var pass = $("#inputPass").val().trim();
+    console.log(username, pass);
+
+    console.log("signing in");
+    $.get("/auth/login", {username:username, password:pass}, function (data) {
+      console.log(data);
+    });
 
   });
 });

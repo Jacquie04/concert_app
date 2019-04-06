@@ -1,7 +1,26 @@
+.jumbotron {
+background: transparent;
+color: white;
+text-emphasis: bold;
+}
+
 #signupPage {
     background-image: url("/images/signup3.jpeg");
-    height:1000px;
+    height: 1000px;
     repeat: no-repeat;
+}
+
+#signupBtn {
+height: 35px;
+width: 70px;
+border: none;
+text-align: center;
+padding-top: 5px;
+border-radius: 6px;
+}
+
+#linkHome {
+    font-size: 100px;
 }
 
 /* Home Page */
@@ -10,7 +29,6 @@
     height: 60px;
     width: 120px;
 }
-
 
 #girlImage {
 height: 400px;

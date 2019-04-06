@@ -30,7 +30,8 @@ router.post('/signup', (req, res, next) => {
                     if (err) {
                         return next(err);
                     }
-                    res.redirect('/');
+                    console.log('saved session after signup');
+                    res.redirect('/login');
                 });
             });
         }).catch(function (err) {
@@ -43,12 +44,13 @@ router.get('/login', (req, res) => {
     res.render('login', {user : req.user});
 });
 
-router.post('/login', passport.authenticate('local', { failureRedirect: '/login' }), (req, res, next) => {
+router.post('/login', passport.authenticate('local', { failureRedirect: '/' }), (req, res, next) => {
+    console.log('hi from post to login')
     req.session.save(err => {
         if (err) {
             return next(err);
         }
-        res.redirect('/');
+        res.redirect('/login');
     });
 });
 

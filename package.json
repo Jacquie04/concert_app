@@ -20,6 +20,7 @@
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
+    "express-session": "^1.15.6",
     "jquery": "3.3.1",
     "jquery.easing": "^1.4.1",
     "mysql2": "^1.6.4",

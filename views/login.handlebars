@@ -2,7 +2,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="/auth/signup">New User? Create A Profile</a>
+        <a class="navbar-brand js-scroll-trigger">Hello, {{user.username}}</a>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -15,7 +15,7 @@
                     <a class="nav-link js-scroll-trigger" href="#about">Search</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#projects">Itinerary</a>
+                    <a class="nav-link js-scroll-trigger" href="#projects">My Itinerary</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#signup">Contact</a>
@@ -34,48 +34,12 @@
             <h2 class="text-white-50 mx-auto mt-2 mb-5"> Having trouble exploring the local music scene during your travels? Start here! 
               A free App to Find & Add Local Concerts to Your Itinerary.
             </h2>
-            <button type="button" id="signInBtn" class="btn btn-primary js-scroll-trigger"
-                onclick="document.getElementById('signinModal').style.display='block'">Sign-In</button>
         </div>
     </div>
 </header>
 
 
-<!--modal -->
-<div id="signinModal" class="modal" role="dialog">
-    <div class="modal-dialog" role="document">
-        <!-- Modal Content -->
-        <form class="modal-content animate" method="post" action="login">
-            <h2>Welcome Back! Please Log In</h2>
-            <br>
-            <img id="signInImage" src="/images/banjo-player-fashion-man-387.jpg" alt="Avatar" class="img-thumbnail">
-            <br>
-            <div class="container">
-                <div class="form-group row">
-                    <label for="inputEmail3" class="col-sm-2 col-form-label">Username</label>
-                    <div class="col-sm-10">
-                        <input type="username" class="form-control" id="inputEmail3" placeholder="Enter Your Username">
-                    </div>
-                </div>
-                <br>
-                <div class="form-group row">
-                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                    <div class="col-sm-10">
-                        <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
-                    </div>
-                </div>
-            </div>
-            <div id="modalFooter" class="container" style="background-color:#f1f1f1">
 
-                <a id="loginBtn" class="btn btn-primary" type="submit">Login</a>
-                <a  id="cancelBtn" class="btn btn-secondary"
-                    onclick="document.getElementById('signinModal').style.display='none'"
-                    class="cancelbtn_not">Cancel</a>
-                <br>
-            </div>
-        </form>
-    </div>
-</div>
 <!-- About Section -->
 <section id="about" class="about-section text-center">
     <div class="container">
