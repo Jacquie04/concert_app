@@ -94,7 +94,7 @@
         <nav class="navbar">
           <form class="form-inline">
             <div class="input-group" id="navBarMain">
-              <input class="Start text" placeholder="Date" type="text">
+              <input class="Start date-picker text" placeholder="Date" type="text">
               <input class="City city-text text" placeholder="City" type="text">
               <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
@@ -122,11 +122,6 @@
                       <font color="black">Czech Republic</font>
                     </a></li>
 
-                  <li data-value="DK"><a class="dropdown-item NA" href="#0">
-                      <font color="black">Denmark</font>
-                    </a></li>
-
-
                   <li data-value="GB "><a class="dropdown-item NA" href="#0">
                       <font color="black">England</font>
                     </a></li>
@@ -139,7 +134,6 @@
                       <font color="black">Germany</font>
                     </a></li>
 
-
                   <li data-value="IE"><a class="dropdown-item NA" href="#0">
                       <font color="black">Ireland</font>
                     </a></li>
@@ -150,10 +144,6 @@
 
                   <li data-value="MX"><a class="dropdown-item NA" href="#0">
                       <font color="black">Mexico</font>
-                    </a></li>
-
-                  <li data-value="NL"><a class="dropdown-item NA" href="#0">
-                      <font color="black">Netherlands</font>
                     </a></li>
 
                   <li data-value="NZ"><a class="dropdown-item NA" href="#0">
@@ -175,10 +165,6 @@
                   <li data-value="SE"><a class="dropdown-item NA" href="#0">
                       <font color="black">Sweden</font>
                     </a></li>
-
-                  <li data-value="CH"><a class="dropdown-item NA" href="#0">
-                      <font color="black">Switzerland</font>
-                    </a></li>
                 </div>
               </div>
             </div>
@@ -192,9 +178,31 @@
     </div>
     <img src="" class="img-fluid" alt="">
   </div>
-  <div id="concert-list">
+  <div class="container in">
+    <div class="col-xl-4 col-lg-5">
+      <div class="featured-text text-center text-lg-left">
+        <section id="confirm">
+          <form action='/api/new' method='POST'>
+            <div class="itineraryTitle">
+              <input type="text" class="form-control" placeholder="Enter Concert Name" name="concert_name" value=""
+                id="enter_name">
+              <input type="text" class="form-control" placeholder="Enter Concert Date(DATE ONLY)" name="concert_date"
+                value="" id="enter_date">
+              <input type="text" class="form-control" placeholder="Enter City & Country" name="concert_city" value=""
+                id="enter_city">
+              <input type="text" class="form-control" placeholder="Enter Concert Time(TIME ONLY)" name="concert_time"
+                value="" id="enter_time">
+              <input type="text" class="form-control" placeholder="Enter Concert Venue" name="concert_venue" value=""
+                id="enter_venue">
+              <button type='submit' class='btn itin btn-outline-info'>Add To Itinerary</button>
+          </form>
+        </section>
+      </div>
+    </div>
+  </div>
+  <div id="concert-list" style="display:none">
     <div class='no-result' style="display:none">
-      <h2>Please fill out date in order to get a result! If looking for a specific
+      <h2 style="color:teal">Please fill out date in order to get a result! If looking for a specific
         city within the country fill out the city name.</h2>
       <img src="https://media2.giphy.com/media/10juQ7fAaQjuHS/giphy.gif" class='sad'>
     </div>
@@ -213,13 +221,34 @@
       <div class="col-xl-4 col-lg-5">
         <div class="featured-text text-center text-lg-left">
           <div class="itineraryTitle">
-            <h4 class="text-white">"Users Name" &nbsp; Journey</h4>
+            <h4 class="text-white">Your Journey</h4>
             <h5>
               <font color="#76D7C4">Concert Itinerary
             </h5>
             </font>
           </div>
           <p class="text-white 0 mb-0">Where's your journey going to take you?&nbsp; </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-black row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <img class="img-fluid mb-3 mb-lg-0" src="/images/singer.png" alt="band">
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <div class="itineraryTitle">
+            {{#each itineraries}}
+            <div class="col-sm-9 text-center">
+              <pre>{{this.id}}. {{this.concertName}}
+					</pre>
+              
+            </div>
+
+
+            {{/each}}
+          </div>
         </div>
       </div>
     </div>
