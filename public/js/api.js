@@ -1,5 +1,7 @@
 $(document).ready(function () {
+
     // $('.dropdown-toggle').dropdown();
+
 
 
     function searchConcert(event) {
@@ -98,6 +100,8 @@ $(document).ready(function () {
             $('.no-result').toggle();
         } else {
             $('.no-result').hide();
-        }
-    })
+        };
+    });
+
 });
+

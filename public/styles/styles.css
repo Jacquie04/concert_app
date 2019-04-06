@@ -97,8 +97,7 @@ color: white;
 
 
 
- 
- #concert-list {
+#concert-list {
     margin: auto;
     background-color: black;
     opacity: 0.8;
@@ -106,10 +105,11 @@ color: white;
     height: 690px;
     overflow: scroll;
     position: relative;
- 
- }
- 
- .concert-image {
+   
+}
+
+.concert-image {
+
     width: 175px;
     height: 175px;
     border-bottom: solid black 1px;
@@ -155,3 +155,7 @@ color: white;
     padding-left: 40px;
     width: 430px;
  }
+
+
+
+
