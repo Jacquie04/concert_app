@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS user_db;
 CREATE DATABASE user_db;
 
-USER user_db;
+USE user_db;
 
 CREATE TABLE user (
 id int NOT NULL AUTO_INCREMENT,

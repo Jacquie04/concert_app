@@ -9,8 +9,8 @@ if(process.env.JAWSDB_URL){
     port: 3306,
     host: "localhost",
     user: "root",
-    password: "RR3withEMGs#",
-    database: "itineraries_db"
+    password: "Jim!2018",
+    database: "user_db"
   });
 
 }
